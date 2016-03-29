@@ -7,10 +7,10 @@ from trytond.model import fields
 
 
 __all__ = ['ContractConsumption']
-__metaclass__ = PoolMeta
 
 
 class ContractConsumption:
+    __metaclass__ = PoolMeta
     __name__ = 'contract.consumption'
     invoice_line = fields.Many2One('account.invoice.line',
         'Invoice Line', readonly=True)
