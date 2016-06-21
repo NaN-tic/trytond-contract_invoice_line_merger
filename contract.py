@@ -2,8 +2,8 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from trytond.pool import PoolMeta
-
 from trytond.model import fields
+from trytond.pyson import Eval
 
 
 __all__ = ['ContractConsumption']
@@ -13,7 +13,10 @@ class ContractConsumption:
     __metaclass__ = PoolMeta
     __name__ = 'contract.consumption'
     invoice_line = fields.Many2One('account.invoice.line',
-        'Invoice Line', readonly=True)
+        'Merged Invoice Line', readonly=True,
+        states={
+            'invisible': ~Eval('invoice_line'),
+        })
 
     @classmethod
     def _invoice(cls, consumptions):

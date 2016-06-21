@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/field[@name='invoice_lines']" position="before">
+        <label name="invoice_line"/>
+        <field name="invoice_line" colspan="3"/>
+    </xpath>
+</data>
