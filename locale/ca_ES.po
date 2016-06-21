@@ -3,5 +3,5 @@ msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "field:contract.consumption,invoice_line:"
-msgid "Invoice Line"
-msgstr "Línia de factura"
+msgid "Merged Invoice Line"
+msgstr "Línia de factura fusionada"

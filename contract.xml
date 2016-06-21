@@ -4,6 +4,11 @@ The COPYRIGHT file at the top level of this repository contains the full
 copyright notices and license terms. -->
 <tryton>
     <data>
+        <record model="ir.ui.view" id="contract_consumption_view_form">
+            <field name="model">contract.consumption</field>
+            <field name="inherit" ref="contract.contract_consumption_view_form"/>
+            <field name="name">contract_consumption_form</field>
+        </record>
         <record model="ir.action.act_window.domain"
                 id="contract.act_contract_consumption_domain_to_invoiced">
             <field name="name">To Invoice</field>
