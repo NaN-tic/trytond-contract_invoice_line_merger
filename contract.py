@@ -9,8 +9,7 @@ from trytond.pyson import Eval
 __all__ = ['ContractConsumption']
 
 
-class ContractConsumption:
-    __metaclass__ = PoolMeta
+class ContractConsumption(metaclass=PoolMeta):
     __name__ = 'contract.consumption'
     invoice_line = fields.Many2One('account.invoice.line',
         'Merged Invoice Line', readonly=True,
